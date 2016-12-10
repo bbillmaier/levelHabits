@@ -14,11 +14,11 @@ function get_assana_tasks(){
 		$asana->getProjectTasks($project->id);
 
 		$tasksArray[$n] = $project->id;
-		echo $project->id.'<br>';
+		//echo $project->id.'<br>';
 		$projectTasks = $asana->getData();
 
 
-		print_r($asana->getData());
+		//print_r($asana->getData());
 		$n++;
 
 		$i = 0;
