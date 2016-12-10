@@ -1,5 +1,12 @@
 <?php
 
+
+	function printArr($array){
+		echo '<pre>';
+			print_r($array);
+		echo '</pre>';
+	}
+
 	include 'Habitica.php';
 	include 'asana.php';
 	include 'get_all_tasks.php';
@@ -17,9 +24,4 @@
 	$apiToken = '07d0acde-d952-458e-aad1-72ca50df05c2';
 
 	$habitica = new Habitica($userId, $apiToken);
-	function printArr($array){
-		echo '<pre>';
-			print_r($array);
-		echo '</pre>';
-	}
 ?>
