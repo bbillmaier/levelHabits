@@ -1,6 +1,6 @@
 <?php
 
-function get_assana_tasks(){
+function get_asana_tasks(){
 
 	$asana->getProjects();
 
