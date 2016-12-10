@@ -15,13 +15,19 @@
 
 
 	//Classes for habitica and asana functionality
-	include 'Habitica.php';
-	include 'asana.php';
+	require 'Habitica.php';
+	require 'asana.php';
+
+	global $asana;
+
+	$asana = new Asana(array(
+		'personalAccessToken' => '0/32637edc751201d2e9d970badd364297'
+	));
 
 	//proprietary functions
-	include 'get_all_tasks.php';
-	//include 'user_array.php';
-	include 'get_habitica_users.php';
+	require 'get_all_tasks.php';
+	//require 'user_array.php';
+	require 'get_all_users.php';
 
 
 

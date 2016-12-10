@@ -1,6 +1,6 @@
 <?php 
 
-	include 'functions.php';
+	require 'functions.php';
 
 	$task
 	$result = $habitica->newTask()

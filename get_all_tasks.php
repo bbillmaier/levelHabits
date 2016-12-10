@@ -1,10 +1,8 @@
 <?php
 
-function get_asana_tasks(){
+function get_asana_tasks($asana){
 
-	$asana = new Asana(array(
-		'personalAccessToken' => '0/32637edc751201d2e9d970badd364297'
-	));
+	
 
 	$asana->getProjects();
 

@@ -1,5 +1,5 @@
 <?php
-	include 'functions.php';
+	require 'functions.php';
 
 	$result = $habitica->userTasks();
 	printArr($result);

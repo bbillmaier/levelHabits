@@ -1,5 +1,5 @@
 <?php
-	include 'functions.php';
+	require 'functions.php';
 
 	$asana->getProjects();
 

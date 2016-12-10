@@ -15,7 +15,7 @@ class AsanaAuth
 {
     private $timeout = 10;
     private $debug = false;
-    private $advDebug = false; // Note that enabling advanced debug will include debugging information in the response possibly breaking up your code.
+    private $advDebug = false; // Note that enabling advanced debug will require debugging information in the response possibly breaking up your code.
 
     private $response;
     public $responseCode;
