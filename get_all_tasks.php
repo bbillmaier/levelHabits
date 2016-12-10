@@ -2,6 +2,10 @@
 
 function get_asana_tasks(){
 
+	$asana = new Asana(array(
+		'personalAccessToken' => '0/32637edc751201d2e9d970badd364297'
+	));
+
 	$asana->getProjects();
 
 	$tasksArray = array();
@@ -26,8 +30,6 @@ function get_asana_tasks(){
 			
 			$asana->getTask($task->id);
 
-			echo $task->id.'<br>';
-
 			$taskDetails = $asana->getData();
 
 			$tasksArray[$project->id][$i] = $taskDetails;
@@ -43,5 +45,6 @@ function get_asana_tasks(){
 
 	return $tasksArray;
 }
+
 
 ?>
