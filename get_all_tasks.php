@@ -5,19 +5,20 @@
 
 	$tasksArray = array();
 
-
+	$n = 0;
 	foreach ($asana->getData() as $project) {
 
 		//printArr($project);
 
 		$asana->getProjectTasks($project->id);
 
-		$tasksArray[] = $project->id;
+		$tasksArray[$n] = $project->id;
 		echo $project->id.'<br>';
 		$projectTasks = $asana->getData();
 
 
 		print_r($asana->getData());
+		$n++;
 
 		$i = 0;
 		foreach ($projectTasks as $task) {
