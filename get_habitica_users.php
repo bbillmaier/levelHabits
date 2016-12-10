@@ -1,6 +1,6 @@
 <?php
 
-function get_habitica_users(){
+function get_habitica_users($userArray){
 	$resultsArray = array();
 
 	$n = 0;

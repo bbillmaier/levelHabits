@@ -17,7 +17,7 @@ function get_asana_tasks(){
 
 		$asana->getProjectTasks($project->id);
 
-		$tasksArray[$n] = $project->id;
+		//$tasksArray[$n] = $project->id;
 		//echo $project->id.'<br>';
 		$projectTasks = $asana->getData();
 

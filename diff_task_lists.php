@@ -1,6 +1,9 @@
 <?php
 
 include 'functions.php';
-$someThing = get_asana_tasks();
 
+$asanaTasks = get_asana_tasks();
+$userTasks = get_habitica_users($userArray);
+printArr($asanaTasks);
+printArr($userTasks);
 ?>
