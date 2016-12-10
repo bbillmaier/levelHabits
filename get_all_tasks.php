@@ -1,5 +1,6 @@
 <?php
-	include 'functions.php';
+
+function get_assana_tasks(){
 
 	$asana->getProjects();
 
@@ -40,5 +41,7 @@
 	    return;
 	}
 
-	printArr($tasksArray);
+	return $tasksArray;
+}
+
 ?>

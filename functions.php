@@ -2,6 +2,7 @@
 
 	include 'Habitica.php';
 	include 'asana.php';
+	include 'get_all_tasks.php';
 
 	$asana = new Asana(array(
 		'personalAccessToken' => '0/32637edc751201d2e9d970badd364297'
