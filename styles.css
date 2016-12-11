@@ -1,7 +1,77 @@
+nav {
+	background-color: #432476;
+}
 nav .nav-wrapper {
     position: relative;
     height: 100%;
     max-width: 1044px;
     margin: 0 auto;
     padding: 0px 20px;
+}
+
+nav .brand-logo{
+	color: #fbfbfb;
+}
+
+nav ul a{
+	color: #fbfbfb;
+}
+
+footer.page-footer{
+	background-color: #432476;
+}
+
+footer.page-footer .container{
+	width: 100%;
+	max-width: 1044px;
+	padding: 0px 20px;
+}
+
+footer.page-footer .footer-copyright{
+	background-color: rgba(0,0,0,0.15);
+}
+
+.row{
+	margin-top: 20px;
+}
+
+.card {
+	background-color: #9e4770;
+}
+
+.card-action a{
+	color: #fbfbfb !important;
+}
+
+
+.card-action a:hover{
+	color: #cccccc !important;
+}
+
+main{
+	max-width: 1044px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+
+.card .card-content .card-title {
+    line-height: 1.2;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.card .card-content {
+    padding: 20px;
+    border-radius: 0 0 2px 2px;
+    min-height: 120px;
+}
+
+@media screen and (min-width: 601px) and (max-width: 850px){
+
+	.card .card-content {
+	    padding: 20px;
+	    border-radius: 0 0 2px 2px;
+	    min-height: 162px;
+	}
+
 }
