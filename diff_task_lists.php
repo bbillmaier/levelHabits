@@ -1,13 +1,35 @@
 <?php
-
+// DEPRECIATED. LEFT AS LEGACY
 require 'functions.php';
 
 $asanaTasks = get_asana_tasks($asana);
-$userTasks = get_habitica_users($userArray);
-printArr($asanaTasks);
-printArr($userTasks);
+$users = get_all_users($userArray);
+//printArr($asanaTasks);
+printArr($userArray);
 
-foreach ($variable as $key => $value) {
-	# code...
+foreach ($asanaTasks as $projectID => $taskGroup) {
+	foreach ($taskGroup as $task) {
+		//printArr($task);
+
+		$taskName = $task->name;
+		$taskID = $task->id;
+		$followers = $task->followers;
+
+		$taskFollowers = array();
+		echo $taskName.'<br/>';
+		foreach ($followers as $follower) {
+			$followerID = $follower->id;
+			$taskFollowers[] = $followerID;
+		}
+		printArr($taskFollowers);
+		echo '<br/>';
+		echo '<br/>';
+
+	}
 }
+
+foreach ($users as $user) {
+	printArr($user);
+}
+
 ?>

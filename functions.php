@@ -1,5 +1,5 @@
 <?php
-
+	include 'connect.php';
 
 	function printArr($array){
 		echo '<pre>';
@@ -7,11 +7,25 @@
 		echo '</pre>';
 	}
 
+	$sth = $dbh->prepare("SELECT * FROM users");
+	$sth->execute();
 
-	$userArray = array(
-		'228439276172045' => array( 'bc40eff9-e00a-4509-b539-2c4e8723a098', '07d0acde-d952-458e-aad1-72ca50df05c2' ),
-		'228443959134227' => array( 'c8df7513-0279-433a-947a-afee7c00ffee', '8e7cc041-b9ef-41a6-ac75-9d4c4926cd6f' )
-	);
+	
+	//print("Fetch all of the remaining rows in the result set:\n");
+	$users = $sth->fetchAll();
+	//printArr($users);
+
+	$userArray = array();
+
+	foreach ($users as $user) {
+		$userAUID = $user['asana_UID'];
+		$userHUID = $user['habitica_UID'];
+		$userHTOKEN = $user['habitica_TOKEN'];
+		$userArray[$userAUID]['huid'] = $userHUID;
+		$userArray[$userAUID]['htoken'] = $userHTOKEN;
+	}
+
+	//printArr($userArray);
 
 
 	//Classes for habitica and asana functionality
@@ -28,9 +42,9 @@
 	require 'get_all_tasks.php';
 	//require 'user_array.php';
 	require 'get_all_users.php';
+	require 'create_task.php';
 
 
-
-
+	//printArr(create_task(228439276172045, 'todo', 'testing the return', 'this worked'));
 
 ?>
