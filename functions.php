@@ -36,6 +36,7 @@
 
 	$asana = new Asana(array(
 		'personalAccessToken' => '0/32637edc751201d2e9d970badd364297'
+		//'personalAccessToken' => '0/1f839ee5b1351779f35f4e264312d6ed'
 	));
 
 	//proprietary functions
