@@ -75,3 +75,28 @@ main{
 	}
 
 }
+
+.user_form_wrapper {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+button.btn.waves-effect.waves-light.user_form_button {
+    background: #9e4770;
+}
+
+input[type="text"]:focus:not([readonly]) {
+	border-bottom: 1px solid #9e4770;
+	box-shadow: 0 1px 0 0 #9e4770;
+}
+
+input[type="text"]:focus:not([readonly])+label {
+	color: #9e4770;
+}
+
+.last_import,
+.last_export {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+}

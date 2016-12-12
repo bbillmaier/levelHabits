@@ -2,10 +2,10 @@
 	
 	//connecting using PDO, because wtf am I? A farmer?
 	
-	$servername = "localhost";
+	$servername = "127.0.0.1";
 	$username = "root";
-	$password = "";
-	$database = "Habitica";
+	$password = "password";
+	$database = "levelHabitsDB";
 
 	try {
 	    $dbh = new PDO("mysql:host=$servername;dbname=".$database, $username, $password);
