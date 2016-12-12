@@ -47,12 +47,11 @@ foreach ($asanaTasks as $projectID => $taskGroup) {
 
 		
 		//print("Fetch all of the remaining rows in the result set:\n");
-		
-		
-
 
 	}
 }
 
+	$sth2 = $dbh->prepare("UPDATE meta SET last_import= (now()) WHERE id=1");
+	$sth2->execute();
 
 ?>

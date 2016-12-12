@@ -1,6 +1,6 @@
 <?php 
 
-	function create_task($asanaID, $type, $text, $note){
+	function create_task($asanaID, $type, $text, $note, $tag){
 		global $dbh;
 		$sth = $dbh->prepare("SELECT * FROM users WHERE asana_UID = ".$asanaID);
 		$sth->execute();
@@ -22,6 +22,7 @@
 		$taskArray['type'] = $type;
 		$taskArray['text'] = $text;
 		$taskArray['note'] = $note;
+
 		
 
 		$result = $habitica->newTask($taskArray);
